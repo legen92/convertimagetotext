@@ -4,10 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "npm install && npm run build:css && npm run build:js",
-    "build:css": "node-sass src/css -o dist/css",
-    "build:js": "browserify src/js/main.js -o dist/js/bundle.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
