@@ -2,11 +2,12 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "netlify deploy --prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "build": "npm install && npm run build:css && npm run build:js",
+    "build:css": "node-sass src/css -o dist/css",
+    "build:js": "browserify src/js/main.js -o dist/js/bundle.js"
   },
   "keywords": [],
   "author": "",

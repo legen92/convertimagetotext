@@ -1,2 +1,8 @@
 [build]
-command = “CI= npm run build”
+  command = "npm run build" # lệnh để build ứng dụng
+  publish = "dist" # thư mục chứa ứng dụng được build
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
